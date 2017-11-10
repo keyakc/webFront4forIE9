@@ -142,7 +142,6 @@ body {
 	height:289px;
 	text-align: left;
 	background-color:white;
-	animation:bounceIn 1s;
 	/*box-sizing:border-box;*/
 }
 #login_close {

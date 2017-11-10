@@ -2,7 +2,11 @@
 //注册事件
 $("#clo_yellow").click(function(){$(this).parent().parent().hide();});
 var login_back=$("#login_back");
-$("#login_close").click(function(){login_back.hide();});
+var login=$("#login");
+$("#login_close").click(function(){
+	$("#login").removeClass("animated bounceIn").addClass("animated bounceOut")	
+	setInterval(function(){login_back.hide()},1000);
+});
 var foc=$("#foc");foc.click(follow);
 var unfoc=$("#unfoc");unfoc.click(unfollow);
 
@@ -26,6 +30,7 @@ function showLogin() {
 	//判断LocalStorage是否已登录
 	//若未登录
 	login_back.show();
+	$("#login").removeClass("animated bounceOut").addClass("animated bounceIn")
 }
 function login_submit() {
 	var inputs=document.getElementById("login_form").getElementsByTagName("input");
